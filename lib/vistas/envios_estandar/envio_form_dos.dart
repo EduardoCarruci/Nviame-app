@@ -6,7 +6,7 @@ import 'package:nviame_app/utils/barra.dart';
 import 'package:nviame_app/utils/cons.dart';
 import 'package:nviame_app/utils/customdrawer.dart';
 import 'package:nviame_app/vistas/envios_estandar/envio_okay.dart';
-import 'package:toggle_switch/toggle_switch.dart';
+
 
 class FormContinuacion extends StatefulWidget {
   @override

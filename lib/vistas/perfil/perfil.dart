@@ -5,7 +5,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:nviame_app/utils/barra.dart';
 import 'package:nviame_app/utils/cons.dart';
 import 'package:nviame_app/utils/customdrawer.dart';
-import 'package:nviame_app/vistas/perfil/formperfil.dart';
+
 
 class Perfil extends StatefulWidget {
   @override

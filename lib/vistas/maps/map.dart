@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:nviame_app/utils/barra.dart';
+
 import 'package:nviame_app/utils/cons.dart';
 
 class MapOferta extends StatefulWidget {

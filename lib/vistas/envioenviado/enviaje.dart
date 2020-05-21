@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nviame_app/utils/barra.dart';
 import 'package:nviame_app/utils/cons.dart';
 import 'package:nviame_app/utils/customdrawer.dart';
-import 'package:nviame_app/vistas/envioenviado/calificarenvio.dart';
+
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class EnViaje extends StatefulWidget {

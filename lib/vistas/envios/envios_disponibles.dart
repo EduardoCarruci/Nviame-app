@@ -32,7 +32,7 @@ class _EnviosState extends State<EnviosDisponibles> {
   Widget build(BuildContext context) {
     final providerInfo = Provider.of<ProviderInfo>(context);
 
-    Size mediaQuery = MediaQuery.of(context).size;
+    //Size mediaQuery = MediaQuery.of(context).size;
     Size size = MediaQuery.of(context).size;
     screenHeight = size.height;
     screenWidth = size.width;
@@ -79,10 +79,10 @@ class _EnviosState extends State<EnviosDisponibles> {
                         ),
                       ),
                       //
-                       Visibility(
+                     /*   Visibility(
                         visible: providerInfo.escalones,
                         child: ContenedorFilter(),
-                      ), 
+                      ),  */
 
                       ///
 
@@ -132,11 +132,11 @@ class _EnviosState extends State<EnviosDisponibles> {
                     ],
                   ),
                 ),
-                Visibility(
+                 Visibility(
                   visible: providerInfo.escalones,
-                  child: EnviosDisponibles(),
+                  child: FilterContainer(),
                 ),
-
+ 
                 Expanded(
                     child: SingleChildScrollView(
                   child: Container(

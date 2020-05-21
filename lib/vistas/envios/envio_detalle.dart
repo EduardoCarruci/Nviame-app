@@ -4,10 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nviame_app/utils/barra.dart';
 import 'package:nviame_app/utils/cons.dart';
 import 'package:nviame_app/utils/customdrawer.dart';
-import 'package:nviame_app/utils/providers.dart';
+
 import 'package:nviame_app/vistas/maps/map.dart';
 import 'package:nviame_app/widgets/container_envios.dart';
-import 'package:provider/provider.dart';
+
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 /* import 'package:speech_bubble/speech_bubble.dart'; */
 
@@ -40,7 +40,7 @@ class _EnviosState extends State<EnvioDetalle> {
     Size size = MediaQuery.of(context).size;
     screenHeight = size.height;
     screenWidth = size.width;
-     final providerInfo = Provider.of<ProviderInfo>(context);
+     //final providerInfo = Provider.of<ProviderInfo>(context);
 
     return SafeArea(
         child: Scaffold(

@@ -4,11 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nviame_app/utils/barra.dart';
 import 'package:nviame_app/utils/cons.dart';
 import 'package:nviame_app/utils/customdrawer.dart';
-import 'package:nviame_app/utils/providers.dart';
+
 import 'package:nviame_app/vistas/envios/envio_detalle.dart';
-import 'package:nviame_app/vistas/envios/envios_disponibles.dart';
+
 import 'package:nviame_app/widgets/container_envios.dart';
-import 'package:provider/provider.dart';
+
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 
 class EnviosBusqueda extends StatefulWidget {
@@ -30,7 +30,7 @@ class _EnviosState extends State<EnviosBusqueda> {
   @override
   Widget build(BuildContext context) {
 
-    final providerInfo = Provider.of<ProviderInfo>(context);
+    //final providerInfo = Provider.of<ProviderInfo>(context);
     
     Size mediaQuery = MediaQuery.of(context).size;
     Size size = MediaQuery.of(context).size;

@@ -1,0 +1,33 @@
+[
+  {
+    "foto": "assets/mi-billetera.svg",
+    "nombre": "Mi billetera"
+    
+  },
+  {
+    "foto": "assets/preferencias.svg",
+    "nombre": "Preferencias"
+    
+  },
+  {
+    "foto": "assets/envios.svg",
+    "nombre": "Mis Envios"
+    
+  },
+  {
+    "foto": "assets/mis-entregas.svg",
+    "nombre": "Mis entregas"
+    
+  },
+  {
+    "foto": "assets/envios.svg",
+    "nombre": "Mis Envios"
+    
+  },
+  {
+    "foto": "assets/devoluciones.svg",
+    "nombre": "Devoluciones"
+    
+  }
+  
+]

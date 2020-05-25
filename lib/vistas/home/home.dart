@@ -61,7 +61,10 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 10,
                     ),
-                    buildButtonContainer(context, screenWidth),
+                    Padding(
+                      padding: const EdgeInsets.only(left:10.0,right: 10.0),
+                      child: buildButtonContainer(context, screenWidth),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
@@ -418,12 +421,13 @@ class _HomePageState extends State<HomePage> {
   Widget buildButtonContainer(BuildContext context, screenWidth) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(25.0),
-      child: CupertinoButton(
+      child: MaterialButton(
         //textColor: Colors.white,
         color: Constants.colorMorado,
+         minWidth: double.infinity,
+        animationDuration: Duration(seconds: 1),
         padding: EdgeInsets.only(
-            left: screenWidth * 0.32,
-            right: screenWidth * 0.32,
+            
             top: 15,
             bottom: 15.0),
         onPressed: () {
@@ -434,7 +438,7 @@ class _HomePageState extends State<HomePage> {
           'Quiero enviar',
           style: TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w500,color: Colors.white
           ),
         ),
       ),

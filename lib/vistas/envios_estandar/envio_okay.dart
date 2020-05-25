@@ -39,8 +39,8 @@ class _EnvioEstandarState extends State<FormOkay> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
-                height: screenHeight * 0.08,
-               // color: Colors.red,
+                height: 60,
+                //color: Colors.red,
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,8 +70,9 @@ class _EnvioEstandarState extends State<FormOkay> {
               ),
               Container(
                 //color: Colors.blue,
-                height: screenHeight * 0.08,
+                height: 80,
                 width: double.infinity,
+
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -88,7 +89,7 @@ class _EnvioEstandarState extends State<FormOkay> {
                 ),
               ),
               Container(
-               // color: Colors.green,
+                // color: Colors.green,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -133,26 +134,29 @@ class _EnvioEstandarState extends State<FormOkay> {
                   ],
                 ),
               ),
-              SizedBox(height: 10.0,),
-             Container(
-               height: screenHeight*0.05,
-               width: double.infinity,
-              // color: Colors.pink,
-               child: Column(
-                 crossAxisAlignment: CrossAxisAlignment.start,
-                 children: <Widget>[
-                  Padding(
-                padding: EdgeInsets.only(left: 20, top: 10),
-                child: Text(
-                  "Comparta el PIN a quién recibirá su envío.",
-                  style: TextStyle(
-                      fontSize: 15.0,
-                      color: Constants.colorMorado,
-                      fontWeight: FontWeight.bold),
+              SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                height: screenHeight * 0.05,
+                width: double.infinity,
+                // color: Colors.pink,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(left: 20, top: 10),
+                      child: Text(
+                        "Comparta el PIN a quién recibirá su envío.",
+                        style: TextStyle(
+                            fontSize: 15.0,
+                            color: Constants.colorMorado,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-               ],),
-             ),
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Row(
@@ -184,17 +188,19 @@ class _EnvioEstandarState extends State<FormOkay> {
                   ],
                 ),
               ),
-              SizedBox(height: 20.0,),
-                            Container(
+              SizedBox(
+                height: 20.0,
+              ),
+              Container(
                 //color: Colors.blue,
-                height: screenHeight * 0.08,
+                height: 60,
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(left: 20, right: 40, top: 0),
+                      padding: EdgeInsets.only(left: 20, right: 20, top: 0),
                       child: Text(
                         "El ingreso del PIN se hará en el móvil de la persona que entrega el envío. Esta acción confirmará la recepción y autorizará la liberación del pago.",
                         textAlign: TextAlign.left,
@@ -204,20 +210,21 @@ class _EnvioEstandarState extends State<FormOkay> {
                   ],
                 ),
               ),
-             
-           Container(
-             height: screenHeight*0.35,
-             //color: Colors.green,
-             width: double.infinity,
-             child: Column(
-               mainAxisAlignment: MainAxisAlignment.end,
-               children: <Widget>[
-                Padding(
-                padding: const EdgeInsets.only(top: 20, bottom: 20),
-                child: buildButtonContainer(context, screenWidth),
-              ),
-             ],),
-           )
+              Container(
+                //height: screenHeight*0.35,
+                //color: Colors.green,
+                width: double.infinity,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          top: 20, bottom: 0, left: 20.0, right: 20.0),
+                      child: buildButtonContainer(context, screenWidth),
+                    ),
+                  ],
+                ),
+              )
             ]),
       ),
     ));
@@ -226,27 +233,23 @@ class _EnvioEstandarState extends State<FormOkay> {
   Widget buildButtonContainer(BuildContext context, screenWidth) {
     return Center(
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20.0),
-        child: CupertinoButton(
+        borderRadius: BorderRadius.circular(25.0),
+        child: MaterialButton(
+          minWidth: double.infinity,
+          height: 50.0,
           //textColor: Colors.white,
           color: Constants.colorMorado,
-          padding: EdgeInsets.only(
-              left: screenWidth * 0.33,
-              right: screenWidth * 0.33,
-              top: 10,
-              bottom: 10.0),
+
           onPressed: () {
             print("hola");
-Navigator.push(
-            context, MaterialPageRoute(builder: (context) => OfertasUrgentes()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => OfertasUrgentes()));
             //OfertasUrgentes
           },
           child: Text(
             'Terminar',
             style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
+                fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white),
           ),
         ),
       ),

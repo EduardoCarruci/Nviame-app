@@ -114,7 +114,10 @@ class _BilleteraState extends State<Billetera> {
                     top: 20.0,
                     //left: 20,
                   ),
-                  child: Center(child: buildButtonContainer(context, screenWidth)),
+                  child: Center(child: Padding(
+                    padding: const EdgeInsets.only(left:15.0,right: 15.0),
+                    child: buildButtonContainer(context, screenWidth),
+                  )),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 20.0, right: 20, top: 15),
@@ -365,15 +368,12 @@ class _BilleteraState extends State<Billetera> {
 
   Widget buildButtonContainer(BuildContext context, screenWidth) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(20.0),
-      child: CupertinoButton(
+      borderRadius: BorderRadius.circular(25.0),
+      child: MaterialButton(
         //textColor: Colors.white,
         color: Constants.colorMorado,
-        padding: EdgeInsets.only(
-            left: screenWidth * 0.2750,
-            right: screenWidth * 0.2750,
-            top: 10,
-            bottom: 10.0),
+       height: 50,
+       minWidth: screenWidth,
         onPressed: () {
           
         },
@@ -382,6 +382,7 @@ class _BilleteraState extends State<Billetera> {
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w500,
+            color: Colors.white
           ),
         ),
       ),

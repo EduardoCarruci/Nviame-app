@@ -208,41 +208,20 @@ Navigator.push(
     );
   }
 
-/*   Widget buildButtonContainer(BuildContext context, screenWidth) {
-    return CupertinoButton(
-      color: Color(0xFF5b4ffb),
-      //minSize: 50,
-      borderRadius: BorderRadius.circular(50),
-      padding: EdgeInsets.only(
-          left: screenWidth * 0.30,
-          right: screenWidth * 0.30,
-          top: 20,
-          bottom: 20),
-      child: Text(
-        "Crear Cuenta",
-        overflow: TextOverflow.fade,
-        maxLines: 1,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 18.0,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      onPressed: () {},
-    );
-  } */
+
     Widget buildButtonContainer(BuildContext context, screenWidth) {
     return Center(
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(25.0),
-        child: CupertinoButton(
+        borderRadius: BorderRadius.circular(50.0),
+        child: MaterialButton(
           //textColor: Colors.white,
+          
           color: Constants.colorMorado,
-          padding: EdgeInsets.only(
-              left: screenWidth * 0.2750,
-            right: screenWidth * 0.2750,
-              top: 15,
-              bottom: 15.0,),
+           
+        minWidth: double.infinity,
+        height: 50,
+        animationDuration: Duration(seconds: 1),
+         
           onPressed: () {
             
           },
@@ -250,7 +229,7 @@ Navigator.push(
             'Crear Cuenta',
             style: TextStyle(
               fontSize: 18,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w500,color:Colors.white
             ),
           ),
         ),

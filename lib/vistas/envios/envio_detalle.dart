@@ -361,7 +361,7 @@ class _EnviosState extends State<EnvioDetalle> {
                     height: 15,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 15.0),
+                    padding: const EdgeInsets.only(left: 15.0,right:15.0),
                     child: buildButtonContainer(context, screenWidth),
                   ),
                   SizedBox(
@@ -749,26 +749,25 @@ class _EnviosState extends State<EnvioDetalle> {
   }
 
   Widget buildButton(BuildContext context, screenWidth) {
-    return CupertinoButton(
-      color: Color(0xFF5b4ffb),
-      borderRadius: BorderRadius.circular(50),
-      padding: EdgeInsets.only(
-          left: screenWidth * 0.30,
-          right: screenWidth * 0.30,
-          top: 5,
-          bottom: 5),
-      child: Text(
-        "Ofertar",
-        style: TextStyle(
-            color: Colors.white,
-            fontSize: 14.0,
-            fontWeight: FontWeight.w900,
-            fontFamily: 'Roboto',
-            fontStyle: FontStyle.normal),
+    return ClipRRect(
+        borderRadius: BorderRadius.circular(50),
+          child: MaterialButton(
+        color: Constants.colorMorado,
+      minWidth: screenWidth,
+      height: 50,
+        child: Text(
+          "Ofertar",
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 14.0,
+              fontWeight: FontWeight.w900,
+              fontFamily: 'Roboto',
+              fontStyle: FontStyle.normal),
+        ),
+        onPressed: () {
+        
+        },
       ),
-      onPressed: () {
-      
-      },
     );
   }
 
@@ -795,34 +794,36 @@ class _EnviosState extends State<EnvioDetalle> {
   }
 
   Widget buildButtonContainer(BuildContext context, screenWidth) {
-    return CupertinoButton(
-      color: Color(0xFF5b4ffb),
-      borderRadius: BorderRadius.circular(50),
-      padding: EdgeInsets.only(
-          left: screenWidth * 0.40,
-          right: screenWidth * 0.40,
-          top: 8,
-          bottom: 8),
-      child: Text(
-        "Ofertar",
-        overflow: TextOverflow.fade,
-        maxLines: 1,
-        style: TextStyle(
-            color: Colors.white,
-            fontSize: 16.0,
-            fontWeight: FontWeight.w600,
-            fontFamily: 'Roboto',
-            fontStyle: FontStyle.normal),
-      ),
-      onPressed: () {
-        
-        
-        setState(() {
-          isDialog = true;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(25.0),
+          child: MaterialButton(
+        color: Constants.colorMorado,
+        minWidth: double.infinity,
+        height: 50.0,
+
+      
           
-         
-        });
-      },
+        child: Text(
+          "Ofertar",
+          overflow: TextOverflow.fade,
+          maxLines: 1,
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 16.0,
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Roboto',
+              fontStyle: FontStyle.normal),
+        ),
+        onPressed: () {
+          
+          
+          setState(() {
+            isDialog = true;
+            
+           
+          });
+        },
+      ),
     );
   }
 

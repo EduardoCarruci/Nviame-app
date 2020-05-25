@@ -390,7 +390,7 @@ class _EnvioEstandarState extends State<FormContinuacion> {
               ),
             ),
           Padding(
-              padding: const EdgeInsets.only(left: 0, top: 20, right: 0.0),
+              padding: const EdgeInsets.only(left:12, top: 20, right: 12.0),
               child: buildButtonContainer(context, screenWidth),
             ),
             Container(
@@ -441,15 +441,14 @@ class _EnvioEstandarState extends State<FormContinuacion> {
   Widget buildButtonContainer(BuildContext context, screenWidth) {
     return Center(
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(25.0),
-        child: CupertinoButton(
+        borderRadius: BorderRadius.circular(50.0),
+        child: MaterialButton(
           //textColor: Colors.white,
           color: Constants.colorMorado,
-          padding: EdgeInsets.only(
-              left: screenWidth * 0.33,
-              right: screenWidth * 0.33,
-              top: 10,
-              bottom: 10.0),
+            minWidth: double.infinity,
+            height: 50,
+        animationDuration: Duration(seconds: 1),
+         
           onPressed: () {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => FormOkay()));
@@ -458,7 +457,7 @@ class _EnvioEstandarState extends State<FormContinuacion> {
             'Crear Envío',
             style: TextStyle(
               fontSize: 16,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w500,color:Colors.white
             ),
           ),
         ),

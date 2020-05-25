@@ -232,12 +232,13 @@ class _LoginState extends State<Login> {
   Widget buildButtonContainer(BuildContext context, screenWidth) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(25.0),
-      child: CupertinoButton(
+      child: MaterialButton(
         //textColor: Colors.white,
         color: Constants.colorMorado,
+        minWidth: double.infinity,
+        animationDuration: Duration(seconds: 1),
         padding: EdgeInsets.only(
-           left: screenWidth * 0.2750,
-            right: screenWidth * 0.2750,
+         
             top: 15,
             bottom: 15.0),
             //0.30
@@ -248,7 +249,7 @@ class _LoginState extends State<Login> {
         child: Text(
           'Iniciar Sesión',
           style: TextStyle(
-            fontSize: 18,
+            fontSize: 18,color:Colors.white
           ),
         ),
       ),
